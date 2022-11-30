@@ -1,0 +1,30 @@
+name: Utility
+version: '${project.version}'
+main: core.core.Utility
+api-version: 1.17
+commands:
+  gamemode:
+    description: Switch between creative & survival
+    usage: /gamemode
+    aliases:
+      - gm
+
+  smite:
+    description: Smite your enemies
+    usage: /smite <online player>
+
+  fly:
+    description: Toggle your flight
+    usage: /fly
+
+  day:
+    description: Sets time to day (1000)
+    usage: /day
+
+  night:
+    description: Sets time to night (13000)
+    usage: /night
+
+  time:
+    description: Sets time to <int>
+    usage: /time <int>
