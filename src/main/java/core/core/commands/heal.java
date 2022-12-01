@@ -7,8 +7,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import java.util.Objects;
-
 public class heal implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String string, String[] args) {
