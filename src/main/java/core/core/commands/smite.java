@@ -24,7 +24,6 @@ public class smite implements CommandExecutor {
 
                     return true;
                 }
-
                 player.sendMessage(ChatColor.DARK_RED + args[0] + ChatColor.RED + " is either offline or an invalid player name");
 
                 return true;
