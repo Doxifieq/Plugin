@@ -15,7 +15,7 @@ public class heal implements CommandExecutor {
         if(sender instanceof Player && sender.isOp()) {
             Player player = (Player) sender;
 
-            player.setHealth(Objects.requireNonNull(player.getAttribute(Attribute.GENERIC_MAX_HEALTH)).getValue());
+            player.setHealth(player.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
             player.sendMessage(ChatColor.YELLOW + "You have been healed.");
 
             return true;
