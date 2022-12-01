@@ -14,7 +14,7 @@ public final class Utility extends JavaPlugin {
 
         new ChatHandler(this);
         //git test does it see this
-        Objects.requireNonNull(getCommand("gamemode")).setExecutor(new gamemode());
+        Objects.requireNonNull(getCommand("randomcommandd")).setExecutor(new gamemode());
         Objects.requireNonNull(getCommand("smite")).setExecutor(new smite());
         Objects.requireNonNull(getCommand("night")).setExecutor(new night());
         Objects.requireNonNull(getCommand("time")).setExecutor(new time());
