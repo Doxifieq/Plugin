@@ -28,3 +28,11 @@ commands:
   time:
     description: Sets time to <int>
     usage: /time <int>
+
+  heal:
+    description: Heals the player
+    usage: /heal
+
+  feed:
+    description: Feeds the player
+    usage: /feed

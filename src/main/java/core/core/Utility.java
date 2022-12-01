@@ -18,6 +18,8 @@ public final class Utility extends JavaPlugin {
         Objects.requireNonNull(getCommand("smite")).setExecutor(new smite());
         Objects.requireNonNull(getCommand("night")).setExecutor(new night());
         Objects.requireNonNull(getCommand("time")).setExecutor(new time());
+        Objects.requireNonNull(getCommand("heal")).setExecutor(new heal());
+        Objects.requireNonNull(getCommand("feed")).setExecutor(new feed());
         Objects.requireNonNull(getCommand("day")).setExecutor(new day());
         Objects.requireNonNull(getCommand("fly")).setExecutor(new fly());
     }
