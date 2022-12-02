@@ -1,5 +1,7 @@
 package core.core.handlers;
 
+import core.core.Utility;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -9,6 +11,10 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 public class BlockHandler implements Listener {
+    public BlockHandler(Utility plugin) {
+        Bukkit.getPluginManager().registerEvents(this, plugin);
+    }
+
     @EventHandler
     public void onRightClick(PlayerInteractEvent e) {
         Player player = e.getPlayer();

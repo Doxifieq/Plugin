@@ -1,8 +1,10 @@
 package core.core;
 
 import core.core.commands.*;
+import core.core.handlers.BlockHandler;
 import core.core.handlers.ChatHandler;
 import org.bukkit.Bukkit;
+import org.bukkit.block.Block;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
@@ -12,6 +14,7 @@ public final class Utility extends JavaPlugin {
     public void onEnable() {
         Bukkit.getLogger().info("[Utility] Enabled Utility V1.0-SNAPSHOT");
 
+        new BlockHandler(this);
         new ChatHandler(this);
 
         Objects.requireNonNull(getCommand("gamemode")).setExecutor(new gamemode());
