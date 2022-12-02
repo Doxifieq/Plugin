@@ -1,5 +1,6 @@
 package core.core.commands;
 
+import net.md_5.bungee.chat.SelectorComponentSerializer;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -7,7 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class smite implements CommandExecutor {
+public class clearinventory implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String string, String[] args) {
         if(sender instanceof Player && sender.isOp()) {
@@ -17,20 +18,21 @@ public class smite implements CommandExecutor {
                 Player target = Bukkit.getPlayer(args[0]);
 
                 if(target != null) {
-                    target.setHealth(0);
-                    target.getWorld().strikeLightningEffect(target.getLocation());
+                    target.getInventory().clear();
+                    target.sendMessage("Your inventory has been cleared.");
 
-                    player.sendMessage(target.getName() + ChatColor.YELLOW + " has been smitten");
+                    player.sendMessage(ChatColor.YELLOW + "Cleared inventory of " + ChatColor.WHITE + target.getName() + ".");
 
                     return true;
                 }
-                player.sendMessage(ChatColor.DARK_RED + args[0] + ChatColor.RED + " is either offline or an invalid player name");
-
-                return true;
             }
-            return false;
+
+            player.getInventory().clear();
+            player.sendMessage(ChatColor.YELLOW + "Your inventory has been cleared.");
+
+            return true;
         }
-        sender.sendMessage(ChatColor.RED + "Insufficient permissions");
+        sender.sendMessage(ChatColor.RED + "Insufficient permissions.");
 
         return true;
     }

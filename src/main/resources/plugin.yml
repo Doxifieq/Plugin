@@ -36,3 +36,10 @@ commands:
   feed:
     description: Feeds the player
     usage: /feed
+
+  clearinventory:
+    description: Clears your inventory, will clear a target inventory if a player is specified
+    usage: /clearinventory <optional | online player>
+    aliases:
+      - clearinv
+      - ci
