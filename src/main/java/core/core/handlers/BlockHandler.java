@@ -4,6 +4,7 @@ import core.core.Utility;
 import org.bukkit.Bukkit;
 import org.bukkit.Effect;
 import org.bukkit.Material;
+import org.bukkit.Particle;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -39,7 +40,6 @@ public class BlockHandler implements Listener {
                 ItemStack item = map.get(random.nextInt(map.size()));
 
                 player.getWorld().dropItemNaturally(block.getLocation(), item);
-                player.getWorld().playEffect(block.getLocation(), Effect.STEP_SOUND, 41);
                 block.setType(Material.AIR);
             }
         }
