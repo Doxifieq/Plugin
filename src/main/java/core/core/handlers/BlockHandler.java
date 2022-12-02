@@ -2,9 +2,7 @@ package core.core.handlers;
 
 import core.core.Utility;
 import org.bukkit.Bukkit;
-import org.bukkit.Effect;
 import org.bukkit.Material;
-import org.bukkit.Particle;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -32,7 +30,9 @@ public class BlockHandler implements Listener {
                 ArrayList<ItemStack> map = new ArrayList<>();
 
                 map.add(new ItemStack(Material.DIRT));
+                map.add(new ItemStack(Material.STONE));
                 map.add(new ItemStack(Material.DIAMOND));
+                map.add(new ItemStack(Material.DEAD_BUSH));
                 map.add(new ItemStack(Material.GOLD_INGOT));
                 map.add(new ItemStack(Material.IRON_INGOT));
 
