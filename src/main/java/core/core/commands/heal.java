@@ -16,6 +16,7 @@ public class heal implements CommandExecutor {
             Player player = (Player) sender;
 
             player.setHealth(Objects.requireNonNull(player.getAttribute(Attribute.GENERIC_MAX_HEALTH)).getValue());
+            player.setFoodLevel(20);
             player.sendMessage(ChatColor.YELLOW + "You have been healed.");
 
             return true;
