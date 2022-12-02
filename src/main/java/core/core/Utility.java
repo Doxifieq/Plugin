@@ -10,8 +10,6 @@ import java.util.Objects;
 public final class Utility extends JavaPlugin {
     @Override
     public void onEnable() {
-        Bukkit.getLogger().info("[Utility] Enabled Utility V1.0-SNAPSHOT");
-
         new ChatHandler(this);
 
         Objects.requireNonNull(getCommand("clearinventory")).setExecutor(new clearinventory());
@@ -23,5 +21,7 @@ public final class Utility extends JavaPlugin {
         Objects.requireNonNull(getCommand("feed")).setExecutor(new feed());
         Objects.requireNonNull(getCommand("day")).setExecutor(new day());
         Objects.requireNonNull(getCommand("fly")).setExecutor(new fly());
+
+        Bukkit.getLogger().info("[Utility] Enabled Utility V1.0-SNAPSHOT");
     }
 }

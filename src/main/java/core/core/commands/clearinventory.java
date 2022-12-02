@@ -18,7 +18,7 @@ public class clearinventory implements CommandExecutor {
 
                 if(target != null) {
                     target.getInventory().clear();
-                    target.sendMessage("Your inventory has been cleared.");
+                    target.sendMessage(ChatColor.YELLOW + "Your inventory has been cleared.");
 
                     player.sendMessage(ChatColor.YELLOW + "Cleared inventory of " + ChatColor.WHITE + target.getName() + ".");
 
