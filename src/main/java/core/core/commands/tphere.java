@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class smite implements CommandExecutor {
+public class tphere implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String string, String[] args) {
         if(sender instanceof Player && sender.isOp()) {
@@ -17,10 +17,7 @@ public class smite implements CommandExecutor {
                 Player target = Bukkit.getPlayer(args[0]);
 
                 if(target != null) {
-                    target.setHealth(0);
-                    target.getWorld().strikeLightningEffect(target.getLocation());
-
-                    player.sendMessage(target.getName() + ChatColor.YELLOW + " has been smitten");
+                    target.teleport(player.getLocation());
 
                     return true;
                 }
