@@ -19,6 +19,8 @@ public class tp implements CommandExecutor {
                 if(target != null) {
                     player.sendMessage(ChatColor.YELLOW + "Teleporting to " + ChatColor.WHITE + target.getName());
                     player.teleport(target.getLocation());
+
+                    return true;
                 }
                 player.sendMessage(ChatColor.DARK_RED + args[0] + ChatColor.RED + " is either offline or an invalid player name.");
 

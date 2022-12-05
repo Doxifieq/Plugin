@@ -17,6 +17,8 @@ public class tphere implements CommandExecutor {
                 Player target = Bukkit.getPlayer(args[0]);
 
                 if(target != null) {
+                    player.sendMessage(ChatColor.YELLOW + "Teleporting " + ChatColor.WHITE + target.getName() + ChatColor.YELLOW + " to you");
+
                     target.teleport(player.getLocation());
 
                     return true;
