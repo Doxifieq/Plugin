@@ -44,7 +44,7 @@ commands:
       - clearinv
       - ci
   tphere:
-    description: Teleports <online player> to you
+    description: Teleport <online player> to you
     usage: /tphere <online player>
     aliases:
       - tph

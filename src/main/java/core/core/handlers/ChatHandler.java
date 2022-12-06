@@ -21,7 +21,7 @@ public class ChatHandler implements Listener {
         e.setCancelled(true);
 
         if(player.isOp()) {
-            Bukkit.broadcastMessage(ChatColor.RED + "[A] " + player.getName() + ": " + ChatColor.WHITE + message);
+            Bukkit.broadcastMessage(ChatColor.RED + player.getName() + ": " + ChatColor.WHITE + message);
         }
         else {
             Bukkit.broadcastMessage(ChatColor.GRAY + player.getName() + ": " + ChatColor.WHITE + message);
